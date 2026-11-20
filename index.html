@@ -83,19 +83,6 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdro
 @media(max-width:860px){.hero-grid{grid-template-columns:1fr}.hero-video{width:min(300px,85%)}}
 
 /* Video cards */
-.vcard{position:relative;aspect-ratio:9/16;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);background:#2c4636;border:1px solid rgba(61,90,75,.25);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none;isolation:isolate;transition:transform .25s}
-.vcard:hover{transform:translateY(-4px)}
-.vcard .art{position:absolute;inset:0;z-index:-1}
-.vcard::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.65))}
-.vcard .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,#7f9a72,#3d5a4b);display:grid;place-items:center;transition:transform .2s}
-.vcard:hover .play{transform:translate(-50%,-50%) scale(1.1)}
-.vcard .play svg{width:22px;height:22px;margin-left:4px;fill:#ffffff}
-.vcard .meta{padding:1rem}
-.vcard .cap{font-weight:700;font-size:1rem;line-height:1.3}
-.vcard .src{font-size:.75rem;opacity:.85;margin-top:.3rem;display:flex;align-items:center;gap:.35rem}
-.vcard .emoji{position:absolute;top:1rem;left:1rem;font-size:1.5rem;background:rgba(255,255,255,.18);border-radius:12px;padding:.25rem .5rem;backdrop-filter:blur(4px)}
-.vcard iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:1.2rem}
 
 /* Offer cards */
 .offers{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.3rem;margin-top:2.5rem}
@@ -204,9 +191,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdro
 .menu-list .mn{display:block;font-size:.82rem;color:var(--muted);font-style:italic}
 .menu-tabs button{font-size:.88rem}
 .menu-note{font-size:.82rem;color:var(--muted);margin-top:1.3rem;font-style:italic}
-.menu-vids{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem}
 @media(max-width:960px){.menu-grid{grid-template-columns:1fr}}
-@media(max-width:520px){.menu-vids{grid-template-columns:repeat(2,1fr)}}
 
 /* Split feature */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
@@ -243,9 +228,6 @@ textarea{min-height:110px;resize:vertical}
 .event-types{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.2rem 0 1.6rem}
 @media(max-width:960px){.events-grid{grid-template-columns:1fr}.events-grid .media{max-width:440px}}
 
-/* Carousel */
-.carousel{display:flex;gap:1.1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem .2rem 1.5rem;margin-top:2.5rem;scrollbar-width:thin}
-.carousel .vcard{flex:0 0 min(240px,70vw);scroll-snap-align:start}
 .vibes{background:#2c4636;border-block:1px solid rgba(61,90,75,.25)}
 .vibes .lead{color:#cfdcd2}.vibes .eyebrow{color:var(--sun)}
 
@@ -255,10 +237,6 @@ textarea{min-height:110px;resize:vertical}
 .stat span{color:var(--muted);font-weight:500;font-size:.92rem}
 @media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr);gap:2rem}}
 
-/* Gallery */
-.gallery{columns:4 200px;column-gap:1.1rem;margin-top:2.5rem}
-.gallery .vcard{break-inside:avoid;margin-bottom:1.1rem}
-.gallery .vcard:nth-child(3n){aspect-ratio:3/4}
 
 /* Follow */
 .follow{background:linear-gradient(135deg,#2c4636,#3d5a4b 40%,#7f9a72);color:#ffffff;border-radius:28px;padding:clamp(2rem,5vw,3.5rem);display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap}
@@ -361,11 +339,6 @@ a.map{display:block;text-decoration:none;color:inherit}
   .why span{font-size:.8rem;line-height:1.45;display:block}
 
   /* swipe rows instead of tall stacks */
-  .menu-vids{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:.75rem;padding-bottom:.6rem;margin-inline:-5vw;padding-inline:5vw;scrollbar-width:none}
-  .menu-vids::-webkit-scrollbar,.carousel::-webkit-scrollbar{display:none}
-  .menu-vids .vcard{flex:0 0 42vw;scroll-snap-align:start}
-  .carousel{margin-inline:-5vw;padding-inline:5vw;scrollbar-width:none}
-  .carousel .vcard{flex-basis:46vw}
   .menu-card{padding:1.3rem}
   .menu-card .btn{width:100%;justify-content:center}
   .menu-list .p{font-size:.9rem}
@@ -379,14 +352,7 @@ a.map{display:block;text-decoration:none;color:inherit}
   .form-card{padding:1.3rem}
   input,select,textarea{font-size:16px}
 
-  .vcard .play{width:48px;height:48px}
-  .vcard .cap{font-size:.86rem}
-  .vcard .src{font-size:.66rem}
-  .vcard .meta{padding:.75rem}
-  .vcard .emoji{font-size:1.1rem;top:.6rem;left:.6rem}
 
-  .gallery{columns:2;column-gap:.7rem}
-  .gallery .vcard{margin-bottom:.7rem}
   .stats{gap:1.5rem}
   .follow{flex-direction:column;align-items:flex-start;padding:1.6rem}
   .follow .btn{width:100%;justify-content:center}
@@ -664,9 +630,6 @@ footer a:hover{color:#fff}
 .mbar{border-color:var(--cream-2)!important;box-shadow:0 10px 30px rgba(31,58,45,.18)}
 .mbar a{color:var(--forest)}
 .mbar .mbar-book{background:linear-gradient(135deg,#4f6d5a,#2c4636);color:#fff}
-.vcard{border-color:rgba(255,255,255,.4)}
-.vcard .play{background:#fff}
-.vcard .play svg{fill:var(--forest)}
 .stat b{color:var(--leaf)}
 .menu-cta-h{color:var(--forest)}
 .mm-nav>button{color:#fff}
@@ -678,6 +641,15 @@ footer a:hover{color:#fff}
 .about .lead{color:#dbe5de}
 footer em{color:#d3d68f!important}
 @media(max-width:860px){.hero-bg::after{background:rgba(28,48,37,.84)}}
+.menu-grid{grid-template-columns:minmax(0,640px);justify-content:center}
+.menu-card{text-align:center}
+.split,.split.rev{grid-template-columns:minmax(0,760px);justify-content:center;direction:ltr}
+.events-grid{grid-template-columns:minmax(0,820px);justify-content:center}
+.rsv-grid{grid-template-columns:minmax(0,820px);justify-content:center}
+.hero-grid{grid-template-columns:minmax(0,640px)}
+#dining>.wrap>.reveal,#events>.wrap>.reveal,#reserve>.wrap>.reveal{text-align:center}
+#dining .lead,#events .lead,#reserve .lead{margin-inline:auto}
+#dining .eyebrow::before,#events .eyebrow::before,#reserve .eyebrow::before{display:none}
 </style>
 </head>
 <body>
@@ -704,7 +676,7 @@ footer em{color:#d3d68f!important}
       <li><a href="#dining">Dining</a></li>
       <li><a href="#pools">Pools</a></li>
       <li><a href="#events">Events</a></li>
-      <li><a href="#gallery">Gallery</a></li>
+      
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-cta">
@@ -839,7 +811,7 @@ footer em{color:#d3d68f!important}
 
 <section id="dining">
   <div class="wrap">
-    <div class="reveal"><span class="eyebrow">Garden dining</span><h2>From our kitchen</h2><p class="lead">Hearty breakfasts, grills and comfort food, served indoors or out on the lawn. Tap a reel to see what's cooking.</p></div>
+    <div class="reveal"><span class="eyebrow">Garden dining</span><h2>From our kitchen</h2><p class="lead">Hearty breakfasts, grills and comfort food, served indoors or out on the lawn.</p></div>
     <div class="menu-grid">
       <div class="menu-card reveal">
         <h3 class="menu-cta-h">Our menu</h3>
@@ -848,7 +820,6 @@ footer em{color:#d3d68f!important}
         <p class="menu-note">Prices are in Kenya shillings (KSh) and may change. Ask our team for today's menu.</p>
         <a class="btn btn-wa" style="margin-top:1.3rem" data-wa="Hi Nibbana Garden, I'd like to place a food order." target="_blank" rel="noopener">Order via WhatsApp</a>
       </div>
-      <div class="menu-vids reveal" data-group="dining"></div>
     </div>
   </div>
 </section>
@@ -870,7 +841,6 @@ footer em{color:#d3d68f!important}
       </div>
       <a class="btn btn-wa" data-wa="Hi Nibbana Garden, I'd like to ask about pool access." target="_blank" rel="noopener">Ask About the Pools</a>
     </div>
-    <div class="media one reveal" data-group="pools"></div>
   </div>
 </section>
 
@@ -890,7 +860,6 @@ footer em{color:#d3d68f!important}
       </div>
       <a class="btn btn-leaf" href="tel:+254722382295"><svg class="i"><use href="#i-phone"/></svg>Call Us Now</a>
     </div>
-    <div class="media one reveal" data-group="lounge"></div>
   </div>
 </section>
 
@@ -898,7 +867,6 @@ footer em{color:#d3d68f!important}
   <div class="wrap">
     <div class="reveal"><span class="eyebrow">Events &amp; conferences</span><h2>Celebrate and meet at Nibbana</h2><p class="lead">Weddings, birthdays, baby showers, corporate retreats and team days. We set the garden or the conference room, handle the catering and look after your guests. Conference capacity: <span data-cfg="confCap"></span>.</p></div>
     <div class="events-grid">
-      <div class="media reveal" data-group="events"></div>
       <div class="reveal">
         <form id="eventForm" class="lux-card" style="margin-top:0" novalidate data-title="Event enquiry">
           <div class="lux-head"><svg><use href="#swan"/></svg><div><h3>Plan your event</h3><small>Weddings · Birthdays · Conferences · Team days</small></div></div>
@@ -957,7 +925,6 @@ footer em{color:#d3d68f!important}
         <div class="success" role="status"></div>
       </form>
     </div>
-    <div class="media one reveal" data-group="reserve"></div>
   </div>
 </section>
 
@@ -969,14 +936,6 @@ footer em{color:#d3d68f!important}
     <div class="stat"><b data-count="7" data-suffix="/7">0</b><span>Open every day</span></div>
   </div>
 </section>
-
-<section id="gallery">
-  <div class="wrap">
-    <div class="center reveal"><span class="eyebrow">Gallery</span><h2>Moments at Nibbana</h2><p class="lead">Scenes from our gardens, pools, kitchen and celebrations. Tap any reel to watch.</p></div>
-    <div class="gallery" data-group="gallery"></div>
-  </div>
-</section>
-
 <section style="padding-top:0">
   <div class="wrap">
     <div class="follow reveal">
@@ -996,7 +955,7 @@ footer em{color:#d3d68f!important}
     </div>
     <div>
       <h4>Explore</h4>
-      <ul><li><a href="#stay">Rooms &amp; Stay</a></li><li><a href="#dining">Dining</a></li><li><a href="#pools">Pools &amp; Play</a></li><li><a href="#events">Events</a></li><li><a href="#reserve">Reservations</a></li><li><a href="#gallery">Gallery</a></li></ul>
+      <ul><li><a href="#stay">Rooms &amp; Stay</a></li><li><a href="#dining">Dining</a></li><li><a href="#pools">Pools &amp; Play</a></li><li><a href="#events">Events</a></li><li><a href="#reserve">Reservations</a></li></ul>
     </div>
     <div>
       <h4>Visit</h4>
@@ -1042,20 +1001,6 @@ const CONFIG = {
   confCap: "[CONFERENCE CAPACITY]",
   programme: "[WEEKLY PROGRAMME]",
   insta: "nibbanagardens",
-  /* true = play each Instagram reel inside its card (use on your live domain).
-     false = cards open the reel on Instagram (used in this preview, where embeds are blocked). */
-  embedMode: false,
-  /* Reel IDs from instagram.com/nibbanagardens. Captions are placeholders: replace with the real ones. */
-  videos: {
-    hero:    [{id:"DSrsnwgEZ9H", cap:"Welcome to Nibbana Garden", t:"a"}],
-    dining:  [{id:"DSrp-YWlDxI", cap:"From our kitchen", t:"c"},{id:"DSrQS5GCjk3", cap:"Fresh plates", t:"d"},{id:"DRZAsrdCIap", cap:"Dinner in the garden", t:"b"}],
-    pools:   [{id:"DRY-PO3iho4", cap:"Pool day at Nibbana", t:"e"}],
-    lounge:  [{id:"DRY9HIUjZh8", cap:"Lounge evenings", t:"f"}],
-    events:  [{id:"DQ_icPwgkVE", cap:"Celebrations at Nibbana", t:"b"},{id:"DQtzjDOkeOc", cap:"Events in the garden", t:"d"}],
-    reserve: [{id:"DQfEwIUCpDf", cap:"Your table awaits", t:"c"}],
-    gallery: [["DQbyzfAgFvV","Garden moments"],["DSrsnwgEZ9H","Welcome to Nibbana"],["DRY-PO3iho4","Poolside"],["DSrp-YWlDxI","From the kitchen"],["DQ_icPwgkVE","Celebrations"],["DRY9HIUjZh8","Lounge evenings"],["DQtzjDOkeOc","Garden events"],["DRZAsrdCIap","Dinner time"],["DQfEwIUCpDf","Good company"],["DSrQS5GCjk3","Fresh plates"]]
-      .map(([id,cap],i)=>({id, cap, t:"abcdef"[i%6]}))
-  },
   rooms: [
     {ic:"bed",    name:"Standard Room", desc:"Cosy room for one or two, ideal for short stays.", price:"KSh [ ] / night"},
     {ic:"star",   name:"Deluxe Room",   desc:"More space and comfort with garden views.",       price:"KSh [ ] / night"},
@@ -1075,37 +1020,6 @@ const CONFIG = {
 
 const $ = (s,c=document)=>c.querySelector(s), $$ = (s,c=document)=>[...c.querySelectorAll(s)];
 const wa = msg => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
-const ttUrl = id => `https://www.instagram.com/reel/${id}/`;
-
-/* Poster art for each card (pure SVG, no external images) */
-const THEMES = {
-  a:["#2c4636","#5f7d68","#e9f0e4"], b:["#3d5a4b","#7f9a72","#ffffff"], c:["#22392c","#4f6d5a","#cfd8a0"],
-  d:["#2c4636","#8a8f3a","#f4f6ec"], e:["#3d5a4b","#5f7d68","#e9f0e4"], f:["#4f6d5a","#a9ab5c","#22392c"]
-};
-function art(t,seed){
-  const [a,b,c]=THEMES[t]||THEMES.a; let s=parseInt(seed.slice(-4))||1;
-  const r=()=>{s=(s*9301+49297)%233280;return s/233280};
-  let blobs=""; for(let i=0;i<5;i++) blobs+=`<circle cx="${r()*90}" cy="${r()*160}" r="${10+r()*25}" fill="${c}" opacity="${.08+r()*.14}"/>`;
-  let tulips=""; for(let i=0;i<3;i++){const x=15+i*30+r()*8,h=110+r()*25;tulips+=`<path d="M${x} 170V${h}" stroke="${b}" stroke-width="2.5" opacity=".7"/><path d="M${x} ${h-16}c-3 5-3 10 0 14 3-4 3-9 0-14zM${x-9} ${h-8}c2 5 5 8 9 8-1-5-4-8-9-8zM${x+9} ${h-8}c-2 5-5 8-9 8 1-5 4-8 9-8z" fill="${c}" opacity=".85"/>`}
-  return `<svg class="art" viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="g${seed}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${b}"/><stop offset="1" stop-color="${a}"/></linearGradient></defs><rect width="90" height="160" fill="url(#g${seed})"/>${blobs}${tulips}</svg>`;
-}
-function card(v){
-  const el=document.createElement("a");
-  el.className="vcard"; el.href=ttUrl(v.id); el.target="_blank"; el.rel="noopener";
-  el.setAttribute("aria-label",`Watch "${v.cap}" on Instagram`);
-  el.innerHTML=`${art(v.t,v.id)}<span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l15 8-15 8z"/></svg></span>
-    <span class="meta"><span class="cap">${v.cap}</span><span class="src">▶ Watch on Instagram · @${CONFIG.insta}</span></span>`;
-  if(CONFIG.embedMode){
-    el.addEventListener("click",e=>{e.preventDefault();
-      el.innerHTML=`<iframe src="https://www.instagram.com/reel/${v.id}/embed" allow="autoplay; encrypted-media; fullscreen" loading="lazy" title="${v.cap}"></iframe>`;},{once:true});
-  }
-  return el;
-}
-
-/* Render video groups */
-$$("[data-video]").forEach(h=>h.appendChild(card(CONFIG.videos[h.dataset.video][0])));
-$$("[data-group]").forEach(h=>CONFIG.videos[h.dataset.group].forEach(v=>h.appendChild(card(v))));
-$$("[data-video-link]").forEach(a=>a.href=ttUrl(CONFIG.videos[a.dataset.videoLink][0].id));
 
 /* Config text + WhatsApp links */
 $$("[data-cfg]").forEach(el=>el.textContent=CONFIG[el.dataset.cfg]);
