@@ -122,6 +122,16 @@ header{position:sticky;top:0;z-index:50;background:rgba(6,30,23,.9);backdrop-fil
 .why span{color:var(--muted);font-size:.94rem}
 
 
+
+/* Signboard hero */
+.hero-photo{justify-self:center;width:min(380px,100%);position:relative;margin:0}
+.hero-photo::before{content:"";position:absolute;inset:-16px -16px 16px 16px;border-radius:26px;background:linear-gradient(135deg,#e6cf8f,#9a7a34);z-index:-1;transform:rotate(3deg)}
+.hero-photo img{display:block;width:100%;height:auto;border-radius:22px;box-shadow:var(--shadow);border:3px solid #f3ead8;aspect-ratio:1/1;object-fit:cover;object-position:50% 43%}
+.hero-photo figcaption{margin-top:.7rem;text-align:center;font-family:var(--serif);font-style:italic;color:var(--tulip-2);font-size:.95rem}
+.svc-bar{background:#3d5a4b;border-block:1px solid rgba(230,207,143,.35);display:flex;flex-wrap:wrap;justify-content:center;color:#f3ead8;font-weight:600;letter-spacing:.03em}
+.svc-bar span{padding:.85rem 1.4rem;position:relative}
+.svc-bar span+span::before{content:"|";position:absolute;left:-.1rem;color:#e6cf8f;opacity:.8}
+@media(max-width:520px){.svc-bar{display:grid;grid-template-columns:1fr 1fr;text-align:center}.svc-bar span{padding:.7rem .5rem;font-size:.86rem}.svc-bar span::before{display:none}.hero-photo{width:min(270px,70vw)}}
 /* Menu book */
 .menu-cta-h{font-family:var(--serif);font-size:1.6rem;color:var(--tulip);margin-bottom:.4rem}
 .menu-cta-p{color:var(--muted);margin-bottom:1.3rem}
@@ -621,19 +631,19 @@ a.map{display:block;text-decoration:none;color:inherit}
       <h1 class="brand-title">Nibbana <span>Garden</span></h1>
       <div class="ornament" aria-hidden="true"><i></i><svg><use href="#tulip"/></svg><i></i></div>
       <p class="tagline">Homely comfort</p>
-      <p class="lead">Your garden oasis in Eldoret. Unwind in calm green gardens with comfortable rooms, an inviting lounge, fresh food, sparkling pools and plenty of space for the kids to play.</p>
+      <p class="lead">A unique destination for leisure and business. Unwind in calm green gardens with comfortable rooms, an inviting lounge, fresh food, sparkling pools and plenty of space for the kids to play.</p>
       <div class="hero-actions">
         <a href="#stay" class="btn btn-tulip">Book Your Stay →</a>
         <a href="#reserve" class="btn btn-ghost" style="color:var(--leaf)">Reserve a Table</a>
       </div>
-      <div class="chips">
-        <span class="chip">Accommodation</span><span class="chip">Lounge &amp; Bar</span><span class="chip">Swimming Pools</span>
-        <span class="chip">Kids' Play Area</span><span class="chip">Events &amp; Conferences</span>
-      </div>
     </div>
-    <div class="hero-video reveal" data-video="hero"></div>
+    <figure class="hero-photo reveal">
+      <img src="signboard.jpg" width="1000" height="1333" alt="The Nibbana Garden signboard at the entrance, Outspan, Eldoret: Homely Comfort, a unique destination for leisure and business" fetchpriority="high">
+      <figcaption>Our gate at Outspan, Eldoret</figcaption>
+    </figure>
   </div>
 </section>
+<div class="svc-bar" role="list" aria-label="What we offer"><span role="listitem">Accommodation</span><span role="listitem">Conference</span><span role="listitem">Swimming</span><span role="listitem">Child Park</span></div>
 
 <section id="offer">
   <div class="wrap">
