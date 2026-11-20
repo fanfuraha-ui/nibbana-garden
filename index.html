@@ -130,11 +130,11 @@ header{position:sticky;top:0;z-index:50;background:rgba(6,30,23,.9);backdrop-fil
 .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,22,16,.9) 0,rgba(6,22,16,.72) 55%,rgba(6,22,16,.4) 100%)}
 .hero-bg i{position:absolute;inset:0;background-size:cover;background-position:50% 42%;opacity:0;animation:heroFade 14s infinite}
 .hero-bg i:nth-child(1){opacity:1}
-.hero-bg i:nth-child(2){background-position:50% 35%;animation-delay:7s}
+.hero-bg i:nth-child(2){background-color:#0a2219;background-repeat:no-repeat;background-size:auto 100%;background-position:78% 50%;animation-delay:7s}
 @keyframes heroFade{0%{opacity:0}8%{opacity:1}50%{opacity:1}58%{opacity:0}100%{opacity:0}}
 .hero-grid{grid-template-columns:minmax(0,640px)}
 .hero .welcome{text-shadow:0 2px 14px rgba(0,0,0,.45)}
-@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.hero-bg::after{background:rgba(6,22,16,.8)}}
+@media(max-width:860px){.hero-bg i:nth-child(2){background-position:50% 50%}.hero-grid{grid-template-columns:1fr}.hero-bg::after{background:rgba(6,22,16,.8)}}
 @media(prefers-reduced-motion:reduce){.hero-bg i{animation:none}.hero-bg i:nth-child(2){display:none}}
 /* Signboard hero */
 .hero-photo{justify-self:center;width:min(380px,100%);position:relative;margin:0}
