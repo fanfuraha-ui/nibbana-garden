@@ -128,7 +128,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(6,30,23,.9);backdrop-fil
 .hero{position:relative;overflow:hidden;isolation:isolate}
 .hero-bg{position:absolute;inset:0;z-index:-1}
 .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,22,16,.9) 0,rgba(6,22,16,.72) 55%,rgba(6,22,16,.4) 100%)}
-.hero-bg i{position:absolute;inset:0;background-size:cover;background-position:50% 42%;opacity:0;animation:heroFade 14s infinite}
+.hero-bg i{position:absolute;inset:0;background-size:cover;background-position:50% 42%;opacity:1}
 .hero-bg i:nth-child(1){opacity:1}
 .hero-bg i:nth-child(2){background-color:#0a2219;background-repeat:no-repeat;background-size:auto 100%;background-position:78% 50%;animation-delay:7s}
 @keyframes heroFade{0%{opacity:0}8%{opacity:1}50%{opacity:1}58%{opacity:0}100%{opacity:0}}
@@ -638,7 +638,7 @@ a.map{display:block;text-decoration:none;color:inherit}
 <main id="home">
 
 <section class="hero">
-  <div class="hero-bg" aria-hidden="true"><i style="background-image:url(hero-gate.jpg)"></i><i style="background-image:url(hero-road.jpg)"></i></div>
+  <div class="hero-bg" aria-hidden="true"><i style="background-image:url(hero-gate.jpg)"></i></div>
   <div class="wrap hero-grid">
     <div class="reveal welcome">
       <span class="karibu">Karibu · Welcome to</span>
